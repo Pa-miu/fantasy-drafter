@@ -1,7 +1,21 @@
 {
   "name": "fantasy-drafter",
   "version": "0.1.0",
+  "author": "Pa-miu",
+  "description": "A native app for creating fantasy draft lineups, made with React and Electron",
   "private": true,
+  "main": "public/main.js",
+  "homepage": "./",
+  "build": {
+    "appId": "nonExistentID",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -11,7 +25,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "build -c.extraMetadata.main=build/main.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +38,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "electron": "^4.1.3",
+    "electron-builder": "^20.39.0",
+    "typescript": "^3.4.1"
+  }
 }
