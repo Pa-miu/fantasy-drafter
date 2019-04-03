@@ -39,25 +39,26 @@ body {
 }
 
 .SingleInput {
-	display:inline-block;
-	padding: 0.75em 0;
-	width: 300px;
+	display: inline-block;
+	padding: 0.75em;
 }
 
 .SingleInput label {
 	color: rgb(161,198,198);
 	cursor: pointer;
-	display: inline-block;
-	padding: 0 0.75em;
-	text-align: right;
-	width: 50%;
 }
 
 .SingleInput input {
 	background-color: rgb(25,31,33);
 	border: 1px solid rgb(75,77,79);
+	display: block;
 	font-size: 1em;
 	color: rgb(132,168,168);
 	line-height: 1.5em;
-	width: 50%;
+}
+
+.Placeholder {
+	color: rgb(161,198,198);
+	display: inline-block;
+	padding: 0.75em;
 }
