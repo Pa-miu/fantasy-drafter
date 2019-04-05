@@ -19,11 +19,14 @@ class App extends Component {
         	<SingleInput id={'minplyrdiff'} name={'Minimum Player Difference Between Lineups'} placeholder={3} />
         </div>
         <div>
-        	<Placeholder name={'USE EXPOSURES'} feature={'checkbox or dropdown boolean'}/>
-        </div>
-        <div>
         	<Placeholder name={'Exclude Pitchers From'} feature={'Chosen-JS multiple select team list'}/>
         	<Placeholder name={'Exclude Hitters From'} feature={'Chosen-JS multiple select team list'}/>
+        </div>
+        <div>
+        	<Placeholder name={'Max Lineups per Combo'} feature={'checkbox or dropdown boolean'}/>
+        </div>
+        <div>
+        	<Placeholder name={'USE EXPOSURES'} feature={'checkbox or dropdown boolean'}/>
         </div>
         <div>
 					<Placeholder name={'Hitter Exposures'} feature={'Chosen-JS multiple select team list'}/>
