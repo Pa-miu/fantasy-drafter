@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SingleInput from './SingleInput.js'
+import MultiSelect from './MultiSelect.js'
 import Placeholder from './Placeholder.js'
 
 class App extends Component {
@@ -29,8 +30,8 @@ class App extends Component {
       		inputId={'minplyrdiff'} 
       		name={'Minimum Player Difference Between Lineups'} 
       		placeholder={3} />
-      	<Placeholder gridpos={'ExcludePitch'} name={'Exclude Pitchers From'} feature={'Chosen-JS multiple select team list'}/>
-      	<Placeholder gridpos={'ExcludeHit'} name={'Exclude Hitters From'} feature={'Chosen-JS multiple select team list'}/>
+      	<MultiSelect gridpos={'ExcludePitch'} name={'Exclude Pitchers From'} />
+      	<MultiSelect gridpos={'ExcludeHit'} name={'Exclude Hitters From'} />
       	<Placeholder gridpos={'MaxLineupsCombo'} name={'Max Lineups per Combo'} feature={'checkbox or dropdown boolean'}/>
       	<Placeholder gridpos={'UseExposure'} name={'Use Exposures'} feature={'checkbox or dropdown boolean'}/>
 				<Placeholder gridpos={'HitterExposure'} name={'Hitter Exposures'} feature={'Chosen-JS multiple select team list'}/>
