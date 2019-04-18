@@ -4,7 +4,7 @@ import MultiSelect from './MultiSelect.js'
 import Placeholder from './Placeholder.js'
 
 const options = [
-	{value: 'CHC', label: 'CHC'},
+	{value: 'CHC',	label: 'CHC'},
 	{value: 'CHW',	label: 'CHW'},
 	{value: 'CIN',	label: 'CIN'},
 	{value: 'CLE',	label: 'CLE'},
@@ -59,8 +59,16 @@ class App extends Component {
       		inputId={'minplyrdiff'} 
       		name={'Minimum Player Difference Between Lineups'} 
       		placeholder={3} />
-      	<MultiSelect gridpos={'ExcludePitch'} name={'Exclude Pitchers From'} options={options} />
-      	<MultiSelect gridpos={'ExcludeHit'} name={'Exclude Hitters From'} options={options} />
+      	<MultiSelect 
+	      	gridpos={'ExcludePitch'} 
+	      	name={'Exclude Pitchers From'} 
+	      	options={options} 
+      	/>
+      	<MultiSelect 
+	      	gridpos={'ExcludeHit'} 
+	      	name={'Exclude Hitters From'} 
+	      	options={options} 
+      	/>
       	<Placeholder gridpos={'MaxLineupsCombo'} name={'Max Lineups per Combo'} feature={'checkbox or dropdown boolean'}/>
       	<Placeholder gridpos={'UseExposure'} name={'Use Exposures'} feature={'checkbox or dropdown boolean'}/>
 				<Placeholder gridpos={'HitterExposure'} name={'Hitter Exposures'} feature={'Chosen-JS multiple select team list'}/>
