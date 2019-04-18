@@ -62,8 +62,44 @@ body {
 	color: #84a8a8;
 	display: block;
 	font-size: 1em;
+	height: 1.8em;
 	line-height: 1.5em;
 	width: 5em;
+}
+
+.CheckboxInput label {
+	cursor: pointer;
+}
+
+.CheckboxInput input[type="checkbox"] {
+	appearance: none;
+	align-items: center;
+	background-color: #191f21;
+	border: 1px solid #4b4d4f;
+	cursor: pointer;
+	display: flex;
+	font-size: 1em;
+	justify-content: center;
+	line-height: 1.5em;
+	height: 1.8em;
+	margin: 0;
+	padding: 1px;
+	width: 1.8em;
+}
+
+.CheckboxInput input[type="checkbox"]:checked{
+	background-color: #4997e5;
+}
+
+.CheckboxInput input[type="checkbox"]::before {
+	content: '✔';
+	color: #dceded;
+	font-weight: bold;
+	visibility: hidden;
+}
+
+.CheckboxInput input[type="checkbox"]:checked::before{
+	visibility: visible;
 }
 
 #Header {
