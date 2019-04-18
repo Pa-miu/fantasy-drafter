@@ -2,35 +2,7 @@ import React, { Component } from 'react';
 import SingleInput from './SingleInput.js'
 import MultiSelect from './MultiSelect.js'
 import Placeholder from './Placeholder.js'
-
-const options = [
-	{value: 'CHC',	label: 'CHC'},
-	{value: 'CHW',	label: 'CHW'},
-	{value: 'CIN',	label: 'CIN'},
-	{value: 'CLE',	label: 'CLE'},
-	{value: 'COL',	label: 'COL'},
-	{value: 'DET',	label: 'DET'},
-	{value: 'HOU',	label: 'HOU'},
-	{value: 'KC',		label: 'KC'},
-	{value: 'LAA',	label: 'LAA'},
-	{value: 'LAD',	label: 'LAD'},
-	{value: 'MIA',	label: 'MIA'},
-	{value: 'MIL',	label: 'MIL'},
-	{value: 'MIN',	label: 'MIN'},
-	{value: 'NYM',	label: 'NYM'},
-	{value: 'NYY',	label: 'NYY'},
-	{value: 'OAK',	label: 'OAK'},
-	{value: 'PHI',	label: 'PHI'},
-	{value: 'PIT',	label: 'PIT'},
-	{value: 'SD',		label: 'SD'},
-	{value: 'SEA',	label: 'SEA'},
-	{value: 'SF',		label: 'SF'},
-	{value: 'STL',	label: 'STL'},
-	{value: 'TB',		label: 'TB'},
-	{value: 'TEX',	label: 'TEX'},
-	{value: 'TOR',	label: 'TOR'},
-	{value: 'WAS',	label: 'WAS'}
-]
+import { teamoptions } from './data.js'
 
 class App extends Component {
   render() {
@@ -62,12 +34,12 @@ class App extends Component {
       	<MultiSelect 
 	      	gridpos={'ExcludePitch'} 
 	      	name={'Exclude Pitchers From'} 
-	      	options={options} 
+	      	options={teamoptions} 
       	/>
       	<MultiSelect 
 	      	gridpos={'ExcludeHit'} 
 	      	name={'Exclude Hitters From'} 
-	      	options={options} 
+	      	options={teamoptions} 
       	/>
       	<Placeholder gridpos={'MaxLineupsCombo'} name={'Max Lineups per Combo'} feature={'checkbox or dropdown boolean'}/>
       	<Placeholder gridpos={'UseExposure'} name={'Use Exposures'} feature={'checkbox or dropdown boolean'}/>
