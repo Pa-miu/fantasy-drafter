@@ -33,7 +33,7 @@ body {
 }
 
 .App {
-	align-items: end;
+	align-items: start;
 	background-color: #0c0f10;
 	border-left: 1px solid #4b4d4f;
 	border-right: 1px solid #4b4d4f;
@@ -62,8 +62,8 @@ body {
 	color: #84a8a8;
 	display: block;
 	font-size: 1em;
-	height: 1.8em;
-	line-height: 1.5em;
+	height: 2em;
+	padding-left: 0.25em;
 	width: 5em;
 }
 
@@ -80,14 +80,13 @@ body {
 	display: flex;
 	font-size: 1em;
 	justify-content: center;
-	line-height: 1.5em;
-	height: 1.8em;
+	height: 2em;
 	margin: 0;
 	padding: 1px;
-	width: 1.8em;
+	width: 2em;
 }
 
-.CheckboxInput input[type="checkbox"]:checked{
+.CheckboxInput input[type="checkbox"]:checked {
 	background-color: #4997e5;
 }
 
@@ -98,8 +97,53 @@ body {
 	visibility: hidden;
 }
 
-.CheckboxInput input[type="checkbox"]:checked::before{
+.CheckboxInput input[type="checkbox"]:checked::before {
 	visibility: visible;
+}
+
+.ModularSelect {
+	display: grid;
+	grid-row-gap: 1em;	
+}
+
+.ModularSelect .ModularSelectRow{
+	align-items: center;
+	display: grid;
+	grid-template-columns: 75% 1fr 1fr;
+	grid-column-gap: 0.5em;
+	justify-content: space-between;
+	justify-items: end;
+}
+
+.ModularSelect input {
+	background-color: #191f21;
+	border: 1px solid #4b4d4f;
+	color: #84a8a8;
+	display: block;
+	font-size: 1em;
+	height: 2em;
+	padding-left: 0.25em;
+	width: 3em;
+}
+
+.ModularSelect .ModularSelectButton {
+	background-color: #191f21;
+	border: 1px solid #4b4d4f;
+	color: #a1c6c6;
+	font-size: 1em;
+	font-weight: bold;
+	height: 2em;
+	padding: 0;
+	width: 3em;
+}
+
+.ModularSelect .ModularSelectButton:hover {
+	border-color: #4997e5;
+	color: #4997e5;
+}
+
+.ModularSelect .GridCenter{
+	justify-self: center;
 }
 
 #Header {

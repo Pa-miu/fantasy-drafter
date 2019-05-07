@@ -48,5 +48,32 @@ export const multiselectstyle = {
 	},
 	menu: provided => ({...provided, backgroundColor: '#191f21' }),
 	multiValue: provided => ({...provided, backgroundColor: '#4997e5'}),
-	multiValueLabel: provided => ({...provided, color: '#dceded'})
+	multiValueLabel: provided => ({...provided, color: '#dceded'}),
+	valueContainer: provided => ({...provided, height: '2em'})
+};
+
+export const modularselectstyle = {
+	container: provided => ({...provided, width: '100%'}),
+	control: (provided, { isFocused }) => { 
+		return {
+			...provided, 
+			'&:hover' : {borderColor: '#4997e5'},
+			backgroundColor: '#191f21', 
+			borderColor: 
+				isFocused ? 
+					'#4997e5' : '#4b4d4f',
+			boxShadow: 'none',
+			padding: '0'
+		};
+	},
+	option: (provided, { isFocused }) => {
+		return {
+			...provided,
+			backgroundColor: isFocused ? '#5489d8' : null,
+			color: isFocused ? '#dceded' : null
+		};
+	},
+	menu: provided => ({...provided, backgroundColor: '#191f21' }),
+	singleValue: provided => ({...provided, color: '#dceded'}),
+	valueContainer: provided => ({...provided, height: '2em'})
 };

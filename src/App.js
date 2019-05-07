@@ -3,6 +3,7 @@ import CheckboxInput from './CheckboxInput.js'
 import MultiSelect from './MultiSelect.js'
 import SingleInput from './SingleInput.js'
 import Placeholder from './Placeholder.js'
+import ModularSelect from './ModularSelect.js'
 import { teamoptions } from './data.js'
 
 class App extends Component {
@@ -46,7 +47,10 @@ class App extends Component {
       		name={'Use Exposures'}
       		checked
       	/>
-				<Placeholder name={'Hitter Exposures'} feature={'Chosen-JS multiple select team list'}/>
+      	<ModularSelect
+      		name={'Hitter Exposures'}
+      		options={teamoptions} 
+      	/>
       </div>
     );
   }
