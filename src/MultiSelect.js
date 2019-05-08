@@ -5,7 +5,7 @@ import { multiselectstyle } from './data.js'
 class MultiSelect extends Component {
 	render() {
 		return(
-			<div id={this.props.gridpos} >
+			<div>
 				{this.props.name}
 				<Select
 					closeMenuOnSelect={false}

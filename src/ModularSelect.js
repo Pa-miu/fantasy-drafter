@@ -5,7 +5,7 @@ import { modularselectstyle } from './data.js';
 class ModularSelect extends Component {
 	render() {
 		return(
-			<div id={this.props.gridpos} className='ModularSelect'>
+			<div className='ModularSelect'>
 				{this.props.name}
 				<div className='ModularSelectRow'>
 					<Select
