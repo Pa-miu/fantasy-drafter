@@ -4,7 +4,7 @@ class CheckboxInput extends Component {
 	render() {
 		return (
 			<div className='CheckboxInput'>
-				<label for={this.props.inputId}>{this.props.name}</label>
+				<label htmlFor={this.props.inputId}>{this.props.name}</label>
 				<input id={this.props.inputId} type='checkbox' value={this.props.checked}/>
 			</div>
 		);
