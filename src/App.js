@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import CheckboxInput from './CheckboxInput.js'
-import MultiSelect from './MultiSelect.js'
-import SingleInput from './SingleInput.js'
-import Placeholder from './Placeholder.js'
+import ClearButton from './ClearButton.js'
 import ModularSelect from './ModularSelect.js'
+import MultiSelect from './MultiSelect.js'
+import Placeholder from './Placeholder.js'
+import SingleInput from './SingleInput.js'
 import { teamoptions } from './data.js'
 
 class App extends Component {
@@ -12,7 +13,9 @@ class App extends Component {
       <div className='App'>
         <div id='Header'><h1>fantasy drafter</h1></div>
       	<Placeholder name={'Projection File'} feature={'load an external csv or use default'}/>
-      	<Placeholder name={'Clear Button'} feature={'clear all fields'}/>
+      	<ClearButton
+      		name={'Clear'}
+      	/>
       	<SingleInput 
       		inputId={'minsal'} 
       		name={'Minimum Salary'} 

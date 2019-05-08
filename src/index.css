@@ -101,6 +101,21 @@ body {
 	visibility: visible;
 }
 
+.ClearButton {
+	background-color: #191f21;
+	border: 1px solid #4b4d4f;
+	color: #a1c6c6;
+	font-size: 1em;
+	height: 2em;
+	justify-self: start;
+	padding: 0 0.5em;
+}
+
+.ClearButton:hover {
+	border-color: #4997e5;
+	color: #4997e5;
+}
+
 .ModularSelect {
 	display: grid;
 	grid-row-gap: 1em;	
