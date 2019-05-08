@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CheckboxInput from './CheckboxInput.js'
 import ClearButton from './ClearButton.js'
+import FileDrop from './FileDrop.js'
 import ModularSelect from './ModularSelect.js'
 import MultiSelect from './MultiSelect.js'
 import Placeholder from './Placeholder.js'
@@ -12,10 +13,11 @@ class App extends Component {
     return (
       <div className='App'>
         <div id='Header'><h1>fantasy drafter</h1></div>
-      	<Placeholder name={'Projection File'} feature={'load an external csv or use default'}/>
-      	<ClearButton
-      		name={'Clear'}
+      	<FileDrop 
+      		name={'Projection File'}
+      		dropmessage={'Drop Here'}
       	/>
+      	<ClearButton name={'Clear'}/>
       	<SingleInput 
       		inputId={'minsal'} 
       		name={'Minimum Salary'} 
