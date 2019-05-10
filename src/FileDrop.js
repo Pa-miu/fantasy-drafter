@@ -6,10 +6,10 @@ class FileDrop extends Component {
 	dropRef = React.createRef()
 
 	state = {
-  	dragging: false
+  	dragging: false,
 	}
 
-	handleDrag = e => {
+	handleDragOver = e => {
 		e.preventDefault();
   	e.stopPropagation();
 	}
@@ -17,7 +17,11 @@ class FileDrop extends Component {
 	handleDragIn = e => {
 		e.preventDefault();
   	e.stopPropagation();
-  	this.dragCounter++;
+  	if (e.target.className !== this.lastDrag) {
+  		// Resolve an issue in Firefox 66.0.5 where events fired more than once on enter
+  		this.dragCounter++;
+  		this.lastDrag = e.target.className;
+  	}
   	if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
     	this.setState({dragging: true});
   	}
@@ -27,6 +31,7 @@ class FileDrop extends Component {
 		e.preventDefault();
   	e.stopPropagation();
   	this.dragCounter--;
+  	this.lastDrag = null;
   	if (this.dragCounter > 0) return
   	this.setState({dragging: false});
 	}
@@ -48,7 +53,8 @@ class FileDrop extends Component {
 		const div = this.dropRef.current;
 		div.addEventListener('dragenter', this.handleDragIn);
 		div.addEventListener('dragleave', this.handleDragOut);
-		div.addEventListener('dragover', this.handleDrag);
+		div.addEventListener('mouseleave', this.handleMouseLeave);
+		div.addEventListener('dragover', this.handleDragOver);
 		div.addEventListener('drop', this.handleDrop);
 	}
 
@@ -56,7 +62,8 @@ class FileDrop extends Component {
 		const div = this.dropRef.current;
 		div.removeEventListener('dragenter', this.handleDragIn);
 		div.removeEventListener('dragleave', this.handleDragOut);
-		div.removeEventListener('dragover', this.handleDrag);
+		div.aremoveEventListener('mouseleave', this.handleMouseLeave);
+		div.removeEventListener('dragover', this.handleDragOver);
 		div.removeEventListener('drop', this.handleDrop);
 	}
 
