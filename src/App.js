@@ -9,6 +9,10 @@ import SingleInput from './SingleInput.js'
 import { teamoptions } from './data.js'
 
 class App extends Component {
+	handleDrop = (file) => {
+		console.log(file[0].name);
+	}
+
   render() {
     return (
       <div className='App'>
@@ -16,6 +20,7 @@ class App extends Component {
       	<FileDrop 
       		name={'Projection File'}
       		dropmessage={'Drop Here'}
+      		handleDrop={this.handleDrop}
       	/>
       	<ClearButton name={'Clear'}/>
       	<SingleInput 
