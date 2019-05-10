@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <div id='Header'><h1>fantasy drafter</h1></div>
+        <div className='Header'><h1>fantasy drafter</h1></div>
       	<FileDrop 
       		name={'Projection File'}
       		dropmessage={'Drop Here'}
