@@ -90,6 +90,7 @@ body {
 	height: 2em;
 	justify-self: start;
 	padding: 0 0.5em;
+	width: 4em;
 }
 
 .ClearButton:hover {
@@ -189,11 +190,11 @@ body {
 	border: 1px solid #4b4d4f;
 	color: #a1c6c6;
 	font-size: 1em;
-	height: 3em;
-	width: 6em;
 	grid-column: 1 / -1;
+	height: 3em;
 	justify-self: center;
 	padding: 0 0.5em;
+	width: 6em;
 }
 
 .SearchButton:hover {
