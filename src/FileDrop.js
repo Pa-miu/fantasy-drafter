@@ -41,8 +41,7 @@ class FileDrop extends Component {
   	e.stopPropagation();
   	this.setState({dragging: false})
   	if (e.dataTransfer.files && e.dataTransfer.files.length > 0){
-  		this.props.handleDrop(e.dataTransfer.files)
-  		//e.dataTransfer.clearData();
+  		this.props.handleDrop(e.dataTransfer.files);
   		this.dragCounter = 0;
   	}
 	}

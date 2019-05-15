@@ -4,7 +4,7 @@ import ClearButton from './ClearButton.js'
 import FileDrop from './FileDrop.js'
 import ModularSelect from './ModularSelect.js'
 import MultiSelect from './MultiSelect.js'
-import Placeholder from './Placeholder.js'
+import SearchButton from './SearchButton.js'
 import SingleInput from './SingleInput.js'
 import { teamoptions } from './data.js'
 
@@ -61,6 +61,7 @@ class App extends Component {
       		name={'Hitter Exposures'}
       		options={teamoptions} 
       	/>
+      	<SearchButton name={'Search'}/>
       </div>
     );
   }

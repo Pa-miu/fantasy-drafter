@@ -183,6 +183,24 @@ body {
 	justify-self: center;
 }
 
+.SearchButton {
+	align-self: center;
+	background-color: #191f21;
+	border: 1px solid #4b4d4f;
+	color: #a1c6c6;
+	font-size: 1em;
+	height: 3em;
+	width: 6em;
+	grid-column: 1 / -1;
+	justify-self: center;
+	padding: 0 0.5em;
+}
+
+.SearchButton:hover {
+	border-color: #4997e5;
+	color: #4997e5;
+}
+
 .SingleInput label {
 	cursor: pointer;
 }
