@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CheckboxInput from './CheckboxInput.js'
 import ClearButton from './ClearButton.js'
 import FileDrop from './FileDrop.js'
+import OutputBox from './OutputBox.js'
 import ModularSelect from './ModularSelect.js'
 import MultiSelect from './MultiSelect.js'
 import SearchButton from './SearchButton.js'
@@ -9,8 +10,12 @@ import SingleInput from './SingleInput.js'
 import { teamoptions } from './data.js'
 
 class App extends Component {
+  state = {
+    output: 'hello'
+  }
+
 	handleDrop = (file) => {
-		console.log(file[0].name);
+    this.setState({output: file[0].name});
 	}
 
   render() {
@@ -62,6 +67,7 @@ class App extends Component {
       		options={teamoptions} 
       	/>
       	<SearchButton name={'Search'}/>
+        <OutputBox output={this.state.output}/>
       </div>
     );
   }

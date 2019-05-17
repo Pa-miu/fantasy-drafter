@@ -139,6 +139,18 @@ body {
 	padding: 0;
 }
 
+.OutputBox {
+	background-color: #191f21;
+	border: 1px solid #4b4d4f;
+	color: #84a8a8;
+	display: inline-grid;
+	font-size: 1em;
+	grid-column: 1 / -1;
+	justify-content: center;
+	padding: 1em;
+	width: 100%;
+}
+
 .ModularSelect {
 	display: grid;
 	grid-row-gap: 1em;	
