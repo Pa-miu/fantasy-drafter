@@ -5,7 +5,11 @@ class CheckboxInput extends Component {
 		return (
 			<div className='CheckboxInput'>
 				<label htmlFor={this.props.inputId}>{this.props.name}</label>
-				<input id={this.props.inputId} type='checkbox' value={this.props.checked}/>
+				<input 
+					checked={this.props.checked}
+					id={this.props.inputId} 
+					onChange={this.props.onChange}
+					type='checkbox'/>
 			</div>
 		);
 	}

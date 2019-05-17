@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SearchButton extends Component {
 	render () {
 		return(
-			<button className='SearchButton' type='button'>{this.props.name}</button>
+			<button className='SearchButton' type='submit'>{this.props.name}</button>
 		)
 	}
 }
